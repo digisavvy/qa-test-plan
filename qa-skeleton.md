@@ -1,56 +1,34 @@
-# TEST PLAN TITLE
+# Gadget Review Infinite Scroll Test Plan
 
-Submit completed tests and debug.log files to:  {Name &lt;email&gt;}
+Submit completed tests and to-dos to 
+This is [Basecamp QA list](https://basecamp.com/2310404/projects/3275221/todolists/24419494 "Title").
 
 Version tested:
-{0.x.y release candidate N, or git commit}
+N/A
 
-Test environment:
-{Dev Environment, Synthesis Hosting}
+Test environment: Dev Environment, Synthesis Hosting
 
 ## Test Setup
 
-Describe any test environment setup that needs to be done, in an explicit, step-by-step fashion.
+You will be testing functionality for Infinite Scroll functionality currently implemented in Dev by visiting [this link](http://dev.gadgetreview.com/2014/09/carbonlite-wrenches-are-your-old-wrenches-but-with-way-more-carbon-fiber/). 
 
-For example, for sanity-testing a release the setup might be:
-
-0. Fork the test plan's github repository (see [TestPlanExecution.md](TestPlanExecution.md) )
-1. Begin with a clean, non-developer operating-system image.
-2. Download latest release candidate from sourceforge.
-3. Run installer or follow installation instructions.
-4. Create a bitcoin.conf file in the default data directory (~/.bitcoin on Linux, etc; see sample.bitcoin.conf)
 
 ## Tests
 
-Each test is a level-3 section, with Title, test procedure, and expected results.  Examples:
+The test consists of scrolling down the page and observing how infinite scroll is functioning. Is the function obvious? Does it work when expected? Is it intuitive?
 
-### Blockchain download
+### Observe infinite scroll in action
 
-Run Bitcoin-Qt for the first time on a clean system.
+[Visit this link](https://basecamp.com/2310404/projects/3275221/todolists/24419494)
 
 EXPECT:
 
-1. After a few minutes, GUI shows wallet with zero balance.
-2. After a few minutes, GUI shows at least one connection to the network.
-3. After 24 hours, GUI shows fully synchronized with network/blockchain.
+1. After scrolling to the bottom, that new content will appear
+2. For paginated content, split up over several pages: When at the bottom of a paginated post, that more content will appear i.e. when at the bottom of page 1, page 2 will appear
 
 PASS/FAIL  (if FAIL, tester may add notes here or links to issues filed)
 
-### Revert back to last release
-
-Run the previous test. Copy the wallet's default receiving bitcoin address.
-Then uninstall Bitcoin-Qt, install the previous release and run it.
-
-EXPECT:
-
-1. Same wallet is used (GUI shows same receiving address)
-2. GUI is up and running and synchronized with the network quickly.
-
-PASS/FAIL
 
 ### Final steps
 
-Tell testers what they should do when they're finished; for example:
-
-Email a link to your forked repository with attached debug.log files to {...}. If the debug.log files are
-too large to attach, upload them to a service like mediafire.com, dropbox, etc. and include a link in the email.
+Post any issues found in usability or functionality to the [QA task list here](https://basecamp.com/2310404/projects/3275221/todolists/24419494 "Title")
